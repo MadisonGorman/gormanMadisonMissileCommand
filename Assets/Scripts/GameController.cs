@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Upon the player pressing the R key, the game restarts
         if(Input.GetKey(KeyCode.R))
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(0);
