@@ -14,6 +14,15 @@ public class DefenseCannonFunctionality : MonoBehaviour
     // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
     Vector2 mousePosition;
 
+    // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
+    public GameObject bulletReference;
+
+    // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
+    public Transform bulletSpawnLocation;
+
+    // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+    public float bulletForce = 20f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +32,18 @@ public class DefenseCannonFunctionality : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetMouseButtonDown(0)))
-        // {
+        if (Input.GetMouseButtonDown(0))
+        {
+            // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
+            // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+            GameObject bullet = Instantiate(bulletReference, bulletSpawnLocation.position, bulletSpawnLocation.rotation);
 
-        //}
+            // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+            Rigidbody2D bulletRb2d = bullet.GetComponent<Rigidbody2D>();
+
+            // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+            bulletRb2d.AddForce(bulletSpawnLocation.up * bulletForce, ForceMode2D.Impulse);
+        }
 
         // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
         mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
