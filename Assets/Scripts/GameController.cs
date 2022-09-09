@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// NOTE: Need to Alter the Missile's direction such that it is facing the correct way when moving towards the cities
 public class GameController : MonoBehaviour
 {
     // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
