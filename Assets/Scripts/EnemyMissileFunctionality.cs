@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMissileFunctionality : MonoBehaviour
 {
     // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
-    int randomAvailableCities;
+    int randomAvailableCity;
 
     // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
     public Transform missileTransform;
@@ -19,11 +19,11 @@ public class EnemyMissileFunctionality : MonoBehaviour
         GameController gc = GameObject.FindObjectOfType<GameController>();
 
         // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
-        randomAvailableCities = Random.Range(0, gc.availableCitiesList.Count);
+        randomAvailableCity = Random.Range(0, gc.availableCitiesList.Count);
 
         // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
         // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
-        Vector2 missileDirection = gc.availableCitiesList [randomAvailableCities].transform.position - missileTransform.position;
+        Vector2 missileDirection = gc.availableCitiesList [randomAvailableCity].transform.position - missileTransform.position;
 
         // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
         float rotationAngle = Mathf.Atan2(missileDirection.y, missileDirection.x) * Mathf.Rad2Deg - 90f;
