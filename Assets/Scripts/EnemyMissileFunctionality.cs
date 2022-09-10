@@ -4,53 +4,37 @@ using UnityEngine;
 
 public class EnemyMissileFunctionality : MonoBehaviour
 {
+    // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
+    int randomAvailableCities;
+
     // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
-    public float missileSpeed = 7;
+    public Transform missileTransform;
 
-    //private Transform cityOneTransform;
-    //private Transform cityTwoTransform;
-    //private Transform cityThreeTransform;
-    //private Transform cityFourTransform;
-    //private Transform cityFiveTransform;
-    //private Transform citySixTransform;
-
-    // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
-    //List<Transform> availableCityPositionsList;
-
-    // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
-    //Transform randomAvailableCityPositions;
-
-    //public Transform missileTransform;
+    // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+    public Rigidbody2D missileRb2d;
 
     // Start is called before the first frame update
     void Start()
     {
-        //cityOneTransform = GameObject.Find("City (1)").transform.GetComponent<Transform>();
-        //cityTwoTransform = GameObject.Find("City (2)").transform.GetComponent<Transform>();
-        //cityThreeTransform = GameObject.Find("City (3)").transform.GetComponent<Transform>();
-        //cityFourTransform = GameObject.Find("City (4)").transform.GetComponent<Transform>();
-        //cityFiveTransform = GameObject.Find("City (5)").transform.GetComponent<Transform>();
-        //citySixTransform = GameObject.Find("City (6)").transform.GetComponent<Transform>();
+        GameController gc = GameObject.FindObjectOfType<GameController>();
 
-        //availableCityPositionsList = new List<Transform>();
+        // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
+        randomAvailableCities = Random.Range(0, gc.availableCitiesList.Count);
 
-        //availableCityPositionsList.Add(cityOneTransform);
-        //availableCityPositionsList.Add(cityTwoTransform);
-        //availableCityPositionsList.Add(cityThreeTransform);
-        //availableCityPositionsList.Add(cityFourTransform);
-        //availableCityPositionsList.Add(cityFiveTransform);
-        //availableCityPositionsList.Add(citySixTransform);
+        // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+        // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
+        Vector2 missileDirection = gc.availableCitiesList [randomAvailableCities].transform.position - missileTransform.position;
+
+        // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+        float rotationAngle = Mathf.Atan2(missileDirection.y, missileDirection.x) * Mathf.Rad2Deg - 90f;
+
+        // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+        missileRb2d.rotation = rotationAngle;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
-        //randomAvailableCityPositions = Random.Range(availableCityPositionsList[0], availableCityPositionsList[5]);
-
-        //float gradual = missileSpeed * Time.deltaTime;
-
-        // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
-        //missileTransform.position = Vector3.MoveTowards(missileTransform.position, availableCityPositionsList [randomAvailableCityPositions], gradual);
+        
     }
 }

@@ -12,6 +12,12 @@ public class GameController : MonoBehaviour
     public float missileMinimumXPosition = -8.15f;
     public float missileMaximumXPosition = 8.15f;
 
+    // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+    public float missileForce = 15f;
+
+    // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
+    public List<GameObject> availableCitiesList;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +43,13 @@ public class GameController : MonoBehaviour
         missilePosition.y = 5.5f;
 
         // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
-        Instantiate(missileReference, missilePosition, Quaternion.identity);
+        // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+        GameObject missile = Instantiate(missileReference, missilePosition, Quaternion.identity);
+
+        // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+        Rigidbody2D missileRb2d = missile.GetComponent<Rigidbody2D>();
+
+        // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+        missileRb2d.AddForce(missilePosition * missileForce, ForceMode2D.Impulse);
     }
 }

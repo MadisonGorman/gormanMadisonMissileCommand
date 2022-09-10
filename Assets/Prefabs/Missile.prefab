@@ -146,12 +146,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b3f12f273244b4fb5fa2c73e53230e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missileSpeed: 3
-  availableCitiesList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   missileTransform: {fileID: 8937818494992775581}
+  missileRb2d: {fileID: 8937818494992775583}

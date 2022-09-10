@@ -1916,6 +1916,14 @@ MonoBehaviour:
   missileReference: {fileID: 8937818494992775579, guid: a22867d31d957ed4c8f6ce3fc81f21a9, type: 3}
   missileMinimumXPosition: -8.15
   missileMaximumXPosition: 8.15
+  missileForce: 0.5
+  availableCitiesList:
+  - {fileID: 963889628}
+  - {fileID: 1804348814}
+  - {fileID: 1091670767}
+  - {fileID: 108575435}
+  - {fileID: 1675828445}
+  - {fileID: 41228355}
 --- !u!1 &1804348814
 GameObject:
   m_ObjectHideFlags: 0
