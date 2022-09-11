@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMissileFunctionality : MonoBehaviour
 {
     // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
-    public float missileSpeed = 0.5f;
+    public float missileSpeed;
 
     // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
     int randomAvailableCity;

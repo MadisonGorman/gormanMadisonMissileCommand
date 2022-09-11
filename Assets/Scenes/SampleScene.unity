@@ -855,7 +855,6 @@ MonoBehaviour:
   mainCamera: {fileID: 519420031}
   bulletReference: {fileID: 6736628735345769755, guid: c98640242ed5f9c499a6152ca4fdfd0f, type: 3}
   bulletSpawnLocation: {fileID: 1081214916}
-  bulletForce: 20
 --- !u!50 &381805350
 Rigidbody2D:
   serializedVersion: 4
@@ -957,7 +956,7 @@ Transform:
   m_GameObject: {fileID: 414099786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.021, y: -1.423, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2346,7 +2345,7 @@ Transform:
   m_GameObject: {fileID: 2094063181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.096667, y: -2.369474, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
