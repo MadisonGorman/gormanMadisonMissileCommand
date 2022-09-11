@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMissileFunctionality : MonoBehaviour
 {
     // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
-    public float missileSpeed = 7;
+    public float missileSpeed = 0.5f;
 
     // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
     int randomAvailableCity;
@@ -15,6 +15,12 @@ public class EnemyMissileFunctionality : MonoBehaviour
 
     // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
     public Rigidbody2D missileRb2d;
+
+    // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+    Vector2 missileDirection;
+
+    // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+    float rotationAngle;
 
     // Start is called before the first frame update
     void Start()
@@ -26,10 +32,10 @@ public class EnemyMissileFunctionality : MonoBehaviour
 
         // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
         // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
-        Vector2 missileDirection = gc.availableCitiesList [randomAvailableCity].transform.position - missileTransform.position;
+        missileDirection = gc.availableCitiesList[randomAvailableCity].transform.position;
 
         // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
-        float rotationAngle = Mathf.Atan2(missileDirection.y, missileDirection.x) * Mathf.Rad2Deg - 90f;
+        rotationAngle = Mathf.Atan2(missileDirection.y, missileDirection.x) * Mathf.Rad2Deg - 90f;
 
         // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
         missileRb2d.rotation = rotationAngle;
@@ -38,6 +44,21 @@ public class EnemyMissileFunctionality : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float gradual = missileSpeed * Time.deltaTime;
 
+        missileTransform.position = Vector3.MoveTowards(missileTransform.position, missileDirection, gradual);
+    }
+
+    // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
+    void OnTriggerEnter2D(Collider2D detectCollision)
+    {
+        // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
+        Debug.Log(detectCollision.name);
+
+        if (detectCollision.gameObject.tag == "City")
+        {
+            // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
+            Destroy(gameObject);
+        }
     }
 }

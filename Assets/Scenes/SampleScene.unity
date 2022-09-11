@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 41228358}
   - component: {fileID: 41228357}
   - component: {fileID: 41228356}
+  - component: {fileID: 41228360}
   m_Layer: 0
   m_Name: City (6)
   m_TagString: City
@@ -256,6 +257,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &41228360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41228355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67d7aa3481d8f741ad994486de1f348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &60206034
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +365,7 @@ GameObject:
   - component: {fileID: 108575438}
   - component: {fileID: 108575437}
   - component: {fileID: 108575436}
+  - component: {fileID: 108575440}
   m_Layer: 0
   m_Name: City (4)
   m_TagString: City
@@ -473,6 +487,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &108575440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108575435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67d7aa3481d8f741ad994486de1f348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &207187693
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,6 +856,7 @@ MonoBehaviour:
   bulletReference: {fileID: 6736628735345769755, guid: c98640242ed5f9c499a6152ca4fdfd0f, type: 3}
   bulletSpawnLocation: {fileID: 1081214916}
   bulletForce: 20
+  bulletTransform: {fileID: 0}
 --- !u!50 &381805350
 Rigidbody2D:
   serializedVersion: 4
@@ -1283,6 +1310,7 @@ GameObject:
   - component: {fileID: 963889631}
   - component: {fileID: 963889630}
   - component: {fileID: 963889629}
+  - component: {fileID: 963889633}
   m_Layer: 0
   m_Name: City (1)
   m_TagString: City
@@ -1404,6 +1432,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963889633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963889628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67d7aa3481d8f741ad994486de1f348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1081214915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,6 +1487,7 @@ GameObject:
   - component: {fileID: 1091670770}
   - component: {fileID: 1091670769}
   - component: {fileID: 1091670768}
+  - component: {fileID: 1091670772}
   m_Layer: 0
   m_Name: City (3)
   m_TagString: City
@@ -1568,6 +1609,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1091670772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091670767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67d7aa3481d8f741ad994486de1f348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1141458272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,6 +1801,7 @@ GameObject:
   - component: {fileID: 1675828448}
   - component: {fileID: 1675828447}
   - component: {fileID: 1675828446}
+  - component: {fileID: 1675828450}
   m_Layer: 0
   m_Name: City (5)
   m_TagString: City
@@ -1869,6 +1923,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1675828450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675828445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67d7aa3481d8f741ad994486de1f348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1738745670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,6 +2002,7 @@ GameObject:
   - component: {fileID: 1804348817}
   - component: {fileID: 1804348816}
   - component: {fileID: 1804348815}
+  - component: {fileID: 1804348819}
   m_Layer: 0
   m_Name: City (2)
   m_TagString: City
@@ -2057,3 +2124,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1804348819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804348814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67d7aa3481d8f741ad994486de1f348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -45,11 +45,10 @@ public class GameController : MonoBehaviour
         // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
         // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
         GameObject missile = Instantiate(missileReference, missilePosition, Quaternion.identity);
+    }
 
-        // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
-        Rigidbody2D missileRb2d = missile.GetComponent<Rigidbody2D>();
-
-        // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
-        missileRb2d.AddForce(missilePosition * missileForce, ForceMode2D.Impulse);
+    public void GameRestarts()
+    {
+        SceneManager.LoadScene(0); 
     }
 }
