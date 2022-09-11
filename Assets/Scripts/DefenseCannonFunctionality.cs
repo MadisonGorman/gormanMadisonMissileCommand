@@ -23,7 +23,7 @@ public class DefenseCannonFunctionality : MonoBehaviour
     // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
     public float bulletForce = 20f;
 
-    public Transform bulletTransform;
+    //public Transform bulletTransform;
 
     // Start is called before the first frame update
     void Start()

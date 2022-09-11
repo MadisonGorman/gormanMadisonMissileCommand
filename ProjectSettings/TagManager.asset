@@ -7,6 +7,8 @@ TagManager:
   - City
   - Bullet
   - Missile
+  - Player Bullet Explosion
+  - Enemy Missile Explosion
   layers:
   - Default
   - TransparentFX

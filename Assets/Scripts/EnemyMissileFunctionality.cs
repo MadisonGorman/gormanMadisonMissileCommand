@@ -22,6 +22,9 @@ public class EnemyMissileFunctionality : MonoBehaviour
     // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
     float rotationAngle;
 
+    // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
+    //public GameObject enemyMissileExplosionReference;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +59,15 @@ public class EnemyMissileFunctionality : MonoBehaviour
         Debug.Log(detectCollision.name);
 
         if (detectCollision.gameObject.tag == "City")
+        {
+            // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
+            //Instantiate(enemyMissileExplosionReference, missileTransform.position, Quaternion.identity);
+
+            // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
+            Destroy(gameObject);
+        }
+
+        if (detectCollision.gameObject.tag == "Player Bullet Explosion")
         {
             // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
             Destroy(gameObject);
