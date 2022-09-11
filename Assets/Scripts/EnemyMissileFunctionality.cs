@@ -23,7 +23,7 @@ public class EnemyMissileFunctionality : MonoBehaviour
     float rotationAngle;
 
     // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
-    //public GameObject enemyMissileExplosionReference;
+    public GameObject enemyMissileExplosionReference;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +50,16 @@ public class EnemyMissileFunctionality : MonoBehaviour
         float gradual = missileSpeed * Time.deltaTime;
 
         missileTransform.position = Vector3.MoveTowards(missileTransform.position, missileDirection, gradual);
+
+        // Referenced: "How to make Missile Command in Unity - 05 - Spawning Explosions" by MetalStorm Games
+        if (missileTransform.position == (Vector3)missileDirection)
+        {
+            // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
+            Instantiate(enemyMissileExplosionReference, missileTransform.position, Quaternion.identity);
+
+            // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
+            Destroy(gameObject);
+        }
     }
 
     // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
@@ -61,7 +71,7 @@ public class EnemyMissileFunctionality : MonoBehaviour
         if (detectCollision.gameObject.tag == "City")
         {
             // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
-            //Instantiate(enemyMissileExplosionReference, missileTransform.position, Quaternion.identity);
+            Instantiate(enemyMissileExplosionReference, missileTransform.position, Quaternion.identity);
 
             // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
             Destroy(gameObject);
@@ -69,6 +79,9 @@ public class EnemyMissileFunctionality : MonoBehaviour
 
         if (detectCollision.gameObject.tag == "Player Bullet Explosion")
         {
+            // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
+            Instantiate(enemyMissileExplosionReference, missileTransform.position, Quaternion.identity);
+
             // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
             Destroy(gameObject);
         }

@@ -255,6 +255,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b4b6578bea69945858b197e7309a43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 7
+  bulletSpeed: 12
   bulletTransform: {fileID: 4991612997299085719}
   playerBulletExplosionReference: {fileID: 4123787477582211429, guid: c1fc738c102d1994cb235f7a04313194, type: 3}

@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnMissile", 1.0f, 3.5f);
+        InvokeRepeating("SpawnMissile", 1.0f, 2.0f);
     }
 
     // Update is called once per frame
