@@ -14,7 +14,7 @@ public class PlayerBulletFunctionality : MonoBehaviour
     private Vector2 bulletTargetPosition;
 
     // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
-    //public GameObject playerBulletExplosionReference;
+    public GameObject playerBulletExplosionReference;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +33,7 @@ public class PlayerBulletFunctionality : MonoBehaviour
         if(bulletTransform.position == (Vector3)bulletTargetPosition)
         {
             // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
-            //Instantiate(playerBulletExplosionReference, bulletTransform.position, Quaternion.identity);
+            Instantiate(playerBulletExplosionReference, bulletTransform.position, Quaternion.identity);
 
             // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
             Destroy(gameObject);

@@ -257,3 +257,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 7
   bulletTransform: {fileID: 4991612997299085719}
+  playerBulletExplosionReference: {fileID: 4123787477582211429, guid: c1fc738c102d1994cb235f7a04313194, type: 3}
