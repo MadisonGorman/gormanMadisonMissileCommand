@@ -24,6 +24,7 @@ public class CityFunctionality : MonoBehaviour
 
         GameController gc = GameObject.FindObjectOfType<GameController>();
 
+        // Upon a city being hit by a missile, said city is removed from the list of available cities and destroyed
         if (detectCollision.gameObject.tag == "Missile")
         {
             // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
@@ -35,6 +36,7 @@ public class CityFunctionality : MonoBehaviour
         }
 
         // Referenced: www.tutorialspoint.com/chash-program-to-check-whether-a-list-is-empty-or-not, "C# program to check whether a list is empty or not"
+        // Upon the list of available cities containing 0 elements, the game restarts
         if (gc.availableCitiesList.Count == 0)
         {
             gc.GameRestarts();

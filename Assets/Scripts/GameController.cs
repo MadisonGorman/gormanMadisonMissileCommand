@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// NOTE: Need to Alter the Missile's direction such that it is facing the correct way when moving towards the cities
 public class GameController : MonoBehaviour
 {
     // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
@@ -12,13 +11,11 @@ public class GameController : MonoBehaviour
     public float missileMinimumXPosition = -8.15f;
     public float missileMaximumXPosition = 8.15f;
 
-    // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
-    public float missileForce = 15f;
-
     // Referenced: "How to Spawn Monsters Randomly from different Spawn Points and Make them Follow the Player in Unity." by Alexander Zotov
     public List<GameObject> availableCitiesList;
 
     // Start is called before the first frame update
+    // Enables an enemy missile to be created with a delay between the creation of each
     void Start()
     {
         InvokeRepeating("SpawnMissile", 1.0f, 2.0f);
@@ -34,6 +31,7 @@ public class GameController : MonoBehaviour
         }
     }
 
+    // Creates a missile at a defined y position and random x position
     public void SpawnMissile()
     {
         Vector3 missilePosition = new Vector3();

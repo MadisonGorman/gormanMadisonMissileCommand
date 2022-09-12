@@ -26,6 +26,7 @@ public class EnemyMissileFunctionality : MonoBehaviour
     public GameObject enemyMissileExplosionReference;
 
     // Start is called before the first frame update
+    // Defines a random city for the missile to venture towards; determines the rotation of the missile
     void Start()
     {
         GameController gc = GameObject.FindObjectOfType<GameController>();
@@ -47,11 +48,13 @@ public class EnemyMissileFunctionality : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Results in the missile venturing towards a random city
         float gradual = missileSpeed * Time.deltaTime;
 
         missileTransform.position = Vector3.MoveTowards(missileTransform.position, missileDirection, gradual);
 
         // Referenced: "How to make Missile Command in Unity - 05 - Spawning Explosions" by MetalStorm Games
+        // If there are multiple missiles venturing towards the same city, and said city is destroyed, the missiles which spawned prior are destroyed and an explosion appears where the city was prior to its destruction
         if (missileTransform.position == (Vector3)missileDirection)
         {
             // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
@@ -63,6 +66,7 @@ public class EnemyMissileFunctionality : MonoBehaviour
     }
 
     // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
+    // Upon a missile hitting a city or a player's bullet explosion, the missile is destroyed and an explosion appears 
     void OnTriggerEnter2D(Collider2D detectCollision)
     {
         // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys

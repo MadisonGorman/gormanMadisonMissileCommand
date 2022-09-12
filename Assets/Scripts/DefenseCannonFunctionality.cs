@@ -29,6 +29,7 @@ public class DefenseCannonFunctionality : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Upon the left mouse button being pressed, a bullet is spawned, appearing from the end of the Tank Barrel
         if (Input.GetMouseButtonDown(0))
         {
             // Referenced: "2D Shooting in Unity (Tutorial)" by Brackeys
@@ -37,10 +38,12 @@ public class DefenseCannonFunctionality : MonoBehaviour
         }
 
         // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+        // Defines the position of the mouse as a concrete point within the game
         mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
     }
 
     // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
+    // Enables the Tank Barrel to rotate, following the position of the mouse
     void FixedUpdate()
     {
         // Referenced: "TOP DOWN SHOOTING in Unity" by Brackeys
